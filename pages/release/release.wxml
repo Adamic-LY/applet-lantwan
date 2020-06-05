@@ -1,0 +1,378 @@
+<!--发布页-->
+<view class="release">
+	<!-- 间隔 -->
+	<view class="releaseGrey"></view>
+	<!-- 产品标题及图片 -->
+	<view class="productTitleImageBox">
+		<view class="productTxt">
+			产品标题及图片
+		</view>
+	</view>
+	<!-- 标题输入框 -->
+	<view class="productInp">
+		<input
+		 type="text"
+		 placeholder="请输入产品标题名称"
+		 value=""
+		 bindblur="gettitle"
+		 style="height:100rpx;line-height:100rpx;width:750rpx"
+		/>
+	</view>
+	<!-- 产品展示及上传 -->
+	<view class="productImageBox">
+		<!-- 产品图 -->
+		<view class="productShow">
+			<image class="" src="{{tempFilePaths.length>=1?tempFilePaths[0]:'../../static/image/1@2x.png'}}" />
+			<image
+			 wx:for="{{tempFilePaths.length-1}}"
+			 wx:key="index"
+			 class=""
+			 style="margin-left:30rpx"
+			 src="{{tempFilePaths[index+1]}}"
+			/>
+			<image
+			 bindtap="uploadproduct"
+			 class=""
+			 style="margin-left:30rpx"
+			 src="../../static/image/2@2x.png"
+			/>
+		</view>
+		<!-- 化验单 -->
+		<view class="laboratoryTestReport ">
+			<image class="" src="{{tempFilePaths1.length>=1?tempFilePaths1[0]:'../../static/image/3@2x.png'}}" />
+			<image
+			 bindtap="uploadlaboratory"
+			 class=""
+			 style="margin-left:30rpx"
+			 src="../../static/image/2@2x.png"
+			/>
+		</view>
+		<view style="height:30rpx">
+		</view>
+
+	</view>
+	<!-- 间隔 -->
+	<view class="releaseGrey"></view>
+	<!-- 指标 -->
+	<view class="indexTarget">
+		<view class="indexTargetTitle">
+			指标
+		</view>
+		<view class="indexTargetItem">
+			<view class="indexTargetFlex">
+				<view class="flexTitle">
+					低位发热量
+				</view>
+				<view class="flexInp">
+					<input
+					 type="text"
+					 bindblur="getdiwei"
+					 placeholder="请输入低位发热量值"
+					 style="height:100rpx;line-height:100rpx;width:500rpx"
+					/>
+				</view>
+			</view>
+		</view>
+		<view class="indexTargetItem">
+			<view class="indexTargetFlex">
+				<view class="flexTitle">
+					硫
+				</view>
+				<view class="flexInp">
+					<input
+					 type="text"
+					 bindblur="getliu"
+					 placeholder="请输入硫百分比"
+					 style="height:100rpx;line-height:100rpx;width:500rpx"
+					/>
+				</view>
+			</view>
+		</view>
+		<view class="indexTargetItem">
+			<view class="indexTargetFlex">
+				<view class="flexTitle">
+					高位发热量
+				</view>
+				<view class="flexInp">
+					<input
+					 type="text"
+					 bindblur="getgaowei"
+					 placeholder="请输入高位发热量值"
+					 style="height:100rpx;line-height:100rpx;width:500rpx"
+					/>
+				</view>
+			</view>
+		</view>
+		<view class="indexTargetItem">
+			<view class="indexTargetFlex">
+				<view class="flexTitle">
+					灰分
+				</view>
+				<view class="flexInp">
+					<input
+					 type="text"
+					 bindblur="gethuifen"
+					 placeholder="请输入灰分百分比 "
+					 style="height:100rpx;line-height:100rpx;width:500rpx"
+					/>
+				</view>
+			</view>
+		</view>
+		<view class="indexTargetItem">
+			<view class="indexTargetFlex">
+				<view class="flexTitle">
+					水分
+				</view>
+				<view class="flexInp">
+					<input
+					 type="text"
+					 bindblur="getshuifen"
+					 placeholder="请输入水分百分比"
+					 style="height:100rpx;line-height:100rpx;width:500rpx"
+					/>
+				</view>
+			</view>
+		</view>
+		<view class="indexTargetItem">
+			<view class="indexTargetFlex">
+				<view class="flexTitle">
+					挥发
+				</view>
+				<view class="flexInp">
+					<input
+					 type="text"
+					 bindblur="gethuifa"
+					 placeholder="请输入挥发百分比"
+					 style="height:100rpx;line-height:100rpx;width:500rpx"
+					/>
+				</view>
+			</view>
+
+		</view>
+	</view>
+	<!-- 间隔 -->
+	<view class="releaseGrey"></view>
+	<!-- 产品介绍 -->
+	<view class="productPresentation">
+		<view class="productPresentationTitle">
+			产品介绍
+		</view>
+		<view class="productPresentationTxt">
+			<textarea
+			 class="productPresentationtextarea"
+			 placeholder="请输入产品介绍,最多可输入140个字"
+			 placeholder-style=""
+			 placeholder-class="textarea-placeholder"
+			 maxlength="140"
+			 bindblur="getjieshao"
+			>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</textarea>
+		</view>
+	</view>
+	<!-- 间隔 -->
+	<view class="releaseGrey"></view>
+	<!-- 产品库存 -->
+	<view class="produnctInventory">
+		<view class="produnctInventoryTitle">
+			产品库存
+		</view>
+		<view class="produnctInventoryFlexBox">
+			<view class="produnctInventoryFlex">
+				<view class="produnctInventoryFlexInp">
+					<input
+					 type="number"
+					 bindblur="getkucun"
+					 placeholder="请输入产品库存(数字)"
+					 style="height:100rpx;line-height:100rpx;width:450rpx"
+					/>
+				</view>
+				<view class="produnctInventoryFlexTxt" style="line-height:100rpx">
+					/吨
+				</view>
+
+			</view>
+		</view>
+	</view>
+	<!-- 间隔 -->
+	<view class="releaseGrey"></view>
+	<!-- 产品价格 -->
+	<view class="produnctPrice">
+		<view class="produnctPriceTitle">
+			产品价格
+		</view>
+		<view class="produnctPriceFlexBox">
+			<view class="produnctPriceFlex">
+				<view class="produnctPriceFlexInp">
+					<input
+					 type="number"
+					 bindblur="getjiage"
+					 placeholder="请输入产品价格(数字)"
+					 style="height:100rpx;line-height:100rpx;width:450rpx"
+					/>
+				</view>
+				<view class="produnctPriceFlexTxt" style="line-height:100rpx">
+					/¥
+				</view>
+
+			</view>
+		</view>
+	</view>
+	<!-- 间隔 -->
+	<view class="releaseGrey"></view>
+	<!-- 产品规格 -->
+	<view class="productSpecification">
+		<view class="productSpecificationTitle">
+			产品规格
+		</view>
+		<view class="productSpecificationFlexBox">
+			<view class="productSpecificationFlex">
+				<view
+				 class="{{btnindex==1?'checkedbtn':'productSpecificationBtn'}}"
+				 bindtap="changeBtnindex"
+				 data-index="{{1}}"
+				 data-value="大料"
+				>
+					大料
+				</view>
+				<view
+				 class="{{btnindex==2?'checkedbtn':'productSpecificationBtn'}}"
+				 bindtap="changeBtnindex"
+				 data-index="{{2}}"
+				 data-value="中料"
+				>
+					中料
+				</view>
+				<view
+				 class="{{btnindex==3?'checkedbtn':'productSpecificationBtn'}}"
+				 bindtap="changeBtnindex"
+				 data-index="{{3}}"
+				 data-value="小料"
+				>
+					小料
+				</view>
+				<view
+				 class="{{btnindex==4?'checkedbtn':'productSpecificationBtn'}}"
+				 bindtap="changeBtnindex"
+				 data-value="米料"
+				 data-index="{{4}}"
+				>
+					米料
+				</view>
+				<view
+				 class="{{btnindex==5?'checkedbtn':'productSpecificationBtn'}}"
+				 bindtap="changeBtnindex"
+				 data-value="焦面"
+				 data-index="{{5}}"
+				>
+					焦面
+				</view>
+
+			</view>
+
+		</view>
+
+	</view>
+	<!-- 企业名称 -->
+	<view class="companyName">
+		<view class="companyTitle">
+			企业名称
+		</view>
+		<view class="companyInp">
+			<input
+			 type="text"
+			 bindblur="getname"
+			 placeholder="请输入企业名称"
+			 style="height:100rpx;line-height:100rpx;width:500rpx"
+			/>
+		</view>
+	</view>
+	<!-- 供应地址 -->
+	<view class="supplierAddress">
+		<view class="supplierAddressTitle">
+			供应地址
+		</view>
+		<view class="supplierAddressInp">
+			<input
+			 type="text"
+			 bindblur="getaddress"
+			 placeholder="请输入供应地址"
+			 style="height:100rpx;line-height:100rpx;width:500rpx"
+			/>
+		</view>
+	</view>
+	<!-- 联系电话 -->
+	<view class="contactNumber">
+		<view class="contactNumberTitle">
+			联系电话
+		</view>
+		<view class="contactNumberInp">
+			<input
+			 type="text"
+			 placeholder="请输入联系电话"
+			 bindblur="getphonenum"
+			/>
+		</view>
+		<button
+		 size="mini"
+		 bindtap="phoneverification"
+		 disabled="{{smsflag}}"
+		 style="color:{{sendcolor}};font-size:22rpx;heigth:60rpx"
+		 wx:if="{{needcode}}"
+		>{{sendtime}}
+		</button>
+		<view wx:else style="font-size:24rpx;color:#e41515">此号码已完成验证</view>
+
+	</view>
+	<!-- 验证码 -->
+	<view class="verificationCode" wx:if="{{needcode}}">
+		<view class="verificationCodeTitle">
+			验证码
+		</view>
+		<view class="verificationCodeInp">
+			<input
+			 type="text"
+			 bindblur="getmess"
+			 placeholder="请输入短信验证码"
+			 style="height:100rpx;line-height:100rpx;width:500rpx"
+			/>
+			<view wx:if="{{rightcode}}" class="verificationCodeInpIcon">
+			   <image src="../../static/icon/2045@2x.png"></image>
+			</view>
+		</view>
+	</view>
+	<!-- 提示 -->
+	<view class="reminder">
+		以上所有内容必须填写(产品展示图最多可上传3张)
+	</view>
+
+	<!-- 占位 -->
+	<view style="height:300rpx">
+
+	</view>
+
+	<!-- 提交发布 -->
+	<view class="releaseBtn" bindtap="requsetUpload">
+		发布
+	</view>
+
+</view>
+

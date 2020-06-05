@@ -1,0 +1,145 @@
+/* pages/productDetail/productDetail.wxss */
+
+.swiperBox {
+    width: 750rpx;
+    height: 600rpx;
+}
+
+.productDetailSwiper {
+    width: 750rpx;
+    height: 600rpx;
+}
+.productAddress{
+    font-weight: bold;
+}
+.swiper-image {
+    width: 750rpx;
+    height: 600rpx;
+}
+
+.priceKcBox {
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+    display: flex;
+}
+
+.priceNum {
+    font-size: 44rpx;
+    color: #e41515;
+}
+
+.priceTxt {
+    font-size: 24rpx;
+    color: #aaaaaa;
+    line-height: 65rpx;
+}
+
+.productNameAddressBox,
+.placeOfDispatch,
+.normBox {
+    margin-left: 30rpx;
+    display: flex;
+    /* align-items: center; */
+    margin-bottom: 20rpx;
+}
+
+.productName {
+    font-weight: bold;
+}
+
+.placeOfDispatchTitle,
+.normTitle {
+    font-size: 28rpx;
+    font-weight: bold;
+    width: 116rpx;
+}
+
+.placeOfDispatchPlace {
+    font-size: 28rpx;
+    margin-left: 50rpx;
+    color: #575757;
+}
+
+.norms {
+    display: flex;
+}
+
+.normsleftTxt,
+.normsrightTxt {
+    font-size: 24rpx;
+    color: #aaaaaa;
+}
+
+.normsleftNum,
+.normsrightNum {
+    margin-left: 10rpx;
+    font-size: 24rpx;
+}
+
+.normsright {
+    margin-left: 100rpx;
+}
+
+.normimage {
+    width: 110rpx;
+    height: 150rpx;
+    margin-left: 75rpx;
+}
+
+.normimage image {
+    width: 110rpx;
+    height: 150rpx;
+}
+
+.productintroduceTitleBox {
+    display: flex;
+    align-items: center;
+    height: 100rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+}
+
+.productintroduceTitleBox image {
+    width: 7rpx;
+    height: 26rpx;
+}
+
+.productintroduceTitle {
+    font-size: 27rpx;
+    font-weight: bold;
+    margin-left: 15rpx;
+}
+
+.productintroduceBox {
+    margin-left: 30rpx;
+}
+
+.productintroduceTxt {
+    max-width: 690rpx;
+    font-size: 24rpx;
+    color: #6e6e6e;
+    line-height: 48rpx;
+}
+
+.callPhone {
+    position: fixed;
+    top: 44vw;
+    right: 30rpx;
+    z-index: 999;
+}
+
+.gorelease {
+    position: fixed;
+    top: 60vw;
+    right: 37rpx;
+    z-index: 999;
+}
+
+.callPhone image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.gorelease image {
+    width: 100rpx;
+    height: 100rpx;
+}

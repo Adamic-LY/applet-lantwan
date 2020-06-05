@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/release/release",
+    "components/searchBar/searchBar",
+    "components/classifyBar/classifyBar",
+    "pages/productDetail/productDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "class-bar": "components/classifyBar/classifyBar"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

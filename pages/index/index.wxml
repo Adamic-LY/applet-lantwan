@@ -1,0 +1,108 @@
+<!--index.wxml-->
+<view class="index">
+	<!-- 分类栏 -->
+	<view class="classBarBox">
+		<class-bar bind:showData="showData"></class-bar>
+	</view>
+	<!-- 占位 -->
+	<view style="height:100rpx;width:750rpx">
+
+	</view>
+	<!-- 产品列表 -->
+	<view wx:for="{{productList}}" wx:key="index"   class="productList">
+		<!-- 产品内容 -->
+		<view class="productFlex"  >
+			<!-- 左边 -->
+			<view class="productImage" data-id="{{item.id}}" bindtap="godetail">
+				<image class="" src="{{host+item.cp_img[0]}}" />
+			</view>
+			<!-- 中间 -->
+			<view class="productZb" data-id="{{item.id}}" bindtap="godetail">
+				<!-- 地址 -->
+				<view class="productName">
+					{{item.title}}
+				</view>
+				<!-- 价格 -->
+				<view class="productPrice">
+					<view class="productPriceNum">
+						{{item.jg}}
+					</view>
+					<view class="productPriceTxt">
+						元/吨
+					</view>
+				</view>
+				<!-- 具体指标 -->
+				<view class="productZhibiao">
+					<view class="productZhibiaoLeft">
+						<view class="productZhibiaoLeftTxt">
+							低位发热量:
+						</view>
+						<view class="productZhibiaoLeftNum">
+							{{item.zb_dwfrl}}
+						</view>
+
+					</view>
+					<view class="productZhibiaoRight">
+						<view class="productZhibiaoRightTxt">
+							硫:
+						</view>
+						<view class="productZhibiaoRightNum">
+							{{item.zb_liu}}
+						</view>
+
+					</view>
+					<view class="productZhibiaoLeft">
+						<view class="productZhibiaoLeftTxt">
+							高位发热量:
+						</view>
+						<view class="productZhibiaoLeftNum">
+							{{item.zb_gwfrl}}
+						</view>
+
+					</view>
+					<view class="productZhibiaoRight">
+						<view class="productZhibiaoRightTxt">
+							灰分:
+						</view>
+						<view class="productZhibiaoRightNum">
+							{{item.zb_hfen}}
+						</view>
+
+					</view>
+					<view class="productZhibiaoLeft">
+						<view class="productZhibiaoLeftTxt">
+							水分:
+						</view>
+						<view class="productZhibiaoLeftNum">
+							{{item.zb_sf}}
+						</view>
+
+					</view>
+					<view class="productZhibiaoRight">
+						<view class="productZhibiaoRightTxt">
+							挥发:
+						</view>
+						<view class="productZhibiaoRightNum">
+							{{item.zb_hfa}}
+						</view>
+
+					</view>
+				</view>
+			</view>
+			<!-- 右边 -->
+			<view
+			 class="productHyd"
+			 bindtap="tobig"
+			 data-src="{{host+item.cphy_img}}"
+			>
+				<image class="" src="{{host+item.cphy_img}}" />
+			</view>
+		</view>
+		<!-- 间隔 -->
+		<view class="productListJiange"></view>
+	</view>
+<view class="shownull" wx:if="{{shownull}}">暂无数据</view>
+<view style="height:200rpx"></view>
+	<view class="gofabu" bindtap="gofabu">去发布</view>
+</view>
+

@@ -1,0 +1,215 @@
+/* pages/release/release.wxss */
+
+.releaseGrey {
+    height: 20rpx;
+    background-color: #f2f2f2;
+}
+
+.productTxt,
+.indexTargetTitle,
+.productPresentationTitle,
+.produnctInventoryTitle,
+.produnctPriceTitle,
+.productSpecificationTitle {
+    width: 750rpx;
+    height: 100rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+    font-size: 30rpx;
+    line-height: 100rpx;
+    padding-left: 30rpx;
+    font-weight: bold;
+}
+
+.productInp {
+    width: 750rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+    display: flex;
+    align-items: center;
+    line-height: 100rpx;
+    height: 100rpx;
+}
+
+.productInp input {
+    font-size: 30rpx;
+    margin-left: 30rpx;
+    line-height: 100rpx;
+    height: 100rpx;
+}
+
+.indexTargetItem,
+.produnctInventoryFlexBox,
+.produnctPriceFlexBox,
+.companyName,
+.productSpecificationFlexBox,
+.supplierAddress,
+.contactNumber,
+.verificationCode {
+    width: 750rpx;
+    height: 100rpx;
+    border-bottom: 1rpx solid #f2f2f2;
+    display: flex;
+    align-items: center;
+}
+
+.indexTargetFlex {
+    display: flex;
+    align-items: center;
+    margin-left: 30rpx;
+}
+
+.flexTitle {
+    width: 220rpx;
+    font-size: 30rpx;
+}
+
+.flexInp,
+.produnctInventoryFlexInp,
+.produnctInventoryFlexTxt,
+.produnctPriceFlexInp,
+.produnctPriceFlexTxt,
+.verificationCodeInp {
+    font-size: 30rpx;
+}
+
+.flexInp,
+.produnctInventoryFlexInp,
+.produnctPriceFlexInp {
+    width: 500rpx;
+    line-height: 100rpx;
+    height: 100rpx;
+}
+.verificationCodeInp{
+   width: 300rpx;
+}
+
+.productPresentationtextarea {
+    font-size: 30rpx;
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+    width: 720rpx;
+    height: 200rpx;
+}
+
+.produnctInventoryFlex,
+.produnctPriceFlex {
+    width: 700rpx;
+    margin-left: 30rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.productSpecificationFlex {
+    display: flex;
+    width: 750rpx;
+    height: 100rpx;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.productImageBox {
+    width: 750rpx;
+}
+
+.productShow,
+.laboratoryTestReport {
+    display: flex;
+    margin-left: 30rpx;
+}
+
+.productShow image,
+.laboratoryTestReport image {
+    width: 150rpx;
+    height: 150rpx;
+    margin-top: 30rpx;
+}
+
+.productSpecificationBtn {
+    width: 100rpx;
+    height: 60rpx;
+    background-color: #f2f2f2;
+    border-radius: 15rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 22rpx;
+}
+
+.checkedbtn {
+    width: 100rpx;
+    height: 60rpx;
+    background-color: orangered;
+    border-radius: 15rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 22rpx;
+    font-weight: bold;
+    color: white;
+}
+
+.companyTitle,
+.supplierAddressTitle,
+.contactNumberTitle,
+.verificationCodeTitle {
+    margin-left: 30rpx;
+    width: 200rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+
+.companyInp input,
+.supplierAddressInp input {
+    font-size: 30rpx;
+    width: 500rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.contactNumberInp input {
+    font-size: 30rpx;
+    line-height: 100rpx;
+    height: 100rpx;
+}
+
+.sendVerification {
+    margin-left: 45rpx;
+    width: 120rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    background-color: #378D05;
+    border-radius: 10rpx;
+    font-size: 22rpx;
+    font-weight: bold;
+    color: white;
+}
+
+.releaseBtn {
+    width: 750rpx;
+    height: 100rpx;
+    background-color: orangered;
+    font-size: 33rpx;
+    font-weight: bold;
+    color: white;
+    line-height: 100rpx;
+    text-align: center;
+}
+
+.reminder {
+    width: 750rpx;
+    height: 100rpx;
+    font-size: 22rpx;
+    color: grey;
+    line-height: 100rpx;
+    text-align: center;
+}
+.verificationCodeInp{
+    display: flex;
+    align-items: center;
+}
+.verificationCodeInpIcon{
+    margin-left: 20rpx;
+}
+
+.verificationCodeInpIcon image {
+    width: 30rpx;
+    height: 30rpx;
+}

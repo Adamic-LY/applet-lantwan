@@ -1,0 +1,41 @@
+/* components/classifyBar/classifyBar.wxss */
+
+.classifyBarBox {
+    width: 750rpx;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+
+.bigClass {
+    width: 125rpx;
+    height: 60rpx;
+    background-color: #ea3b2b;
+    font-size: 28rpx;
+    color: #ffffff;
+    border-radius: 5rpx;
+    margin-left: 24rpx;
+    text-align: center;
+    line-height: 60rpx;
+}
+
+.smallclass {
+    width: 119rpx;
+    height: 60rpx;
+    border-right: 1rpx solid #f2f2f2;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 60rpx;
+}
+
+.chooiseclass {
+    width: 119rpx;
+    height: 60rpx;
+    border-right: 1rpx solid #f2f2f2;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 60rpx;
+    color: #ea3b2b;
+    font-weight: bold;
+}

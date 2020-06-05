@@ -1,0 +1,148 @@
+<!--pages/productDetail/productDetail.wxml-->
+
+<!--pages/productDetail/productDetail.wxml-->
+<view class="productDetail">
+	<!-- 轮播 -->
+	<view class="swiperBox">
+		<swiper
+		 class="productDetailSwiper"
+		 autoplay="{{true}}"
+		 interval="3000"
+		 circular="{{true}}"
+		>
+			<swiper-item wx:for="{{productDetail.cp_img}}" wx:key="index" class="" item-id="">
+				<view>
+					<image class="swiper-image" src="{{host+productDetail.cp_img[index]}}" />
+				</view>
+			</swiper-item>
+		</swiper>
+	</view>
+	<!-- 价格库存 -->
+	<view class="priceKcBox">
+		<view class="priceNum">
+			{{productDetail.jg}}
+		</view>
+		<view class="priceTxt" style="margin-left:10rpx">
+			元/吨
+		</view>
+		<view class="priceTxt" style="margin-left:80rpx">
+			库存:
+		</view>
+		<view class="priceTxt" style="margin-left:10rpx">
+			{{productDetail.kc}}
+		</view>
+	</view>
+	<!-- 产品名称及地址 -->
+	<view class="productNameAddressBox">
+		<view class="productName">
+			{{productDetail.title}}
+		</view>
+		<view class="productAddress" style="margin-left:20rpx">
+			{{productDetail.name}}
+		</view>
+	</view>
+	<!-- 发货地址 -->
+	<view class="placeOfDispatch">
+		<view class="placeOfDispatchTitle">
+			发货地
+		</view>
+		<view class="placeOfDispatchPlace">
+	  {{productDetail.gydz}}
+		</view>
+	</view>
+	<!-- 间隔 -->
+	<view style="height:30rpx"></view>
+	<!-- 指标 -->
+	<view class="normBox">
+		<view class="normTitle">
+			指标
+		</view>
+		<view class="norms">
+			<view class="normsleft">
+				<view style="display:flex;margin-bottom:20rpx">
+					<view class="normsleftTxt">
+						低位发热量:
+					</view>
+					<view class="normsleftNum">
+						{{productDetail.zb_dwfrl}}
+					</view>
+				</view>
+				<view style="display:flex;margin-bottom:20rpx">
+					<view class="normsleftTxt">
+						高位发热量:
+					</view>
+					<view class="normsleftNum">
+						{{productDetail.zb_gwfrl}}
+					</view>
+				</view>
+				<view style="display:flex;margin-bottom:20rpx">
+					<view class="normsleftTxt">
+						水分:
+					</view>
+					<view class="normsleftNum">
+						{{productDetail.zb_sf}}
+					</view>
+				</view>
+
+			</view>
+			<view class="normsright">
+				<view style="display:flex;margin-bottom:20rpx">
+					<view class="normsrightTxt">
+						硫:
+					</view>
+					<view class="normsrightNum">
+						{{productDetail.zb_liu}}
+					</view>
+				</view>
+				<view style="display:flex;margin-bottom:20rpx">
+					<view class="normsrightTxt">
+						灰分:
+					</view>
+					<view class="normsrightNum">
+						{{productDetail.zb_hfen}}
+					</view>
+				</view>
+				<view style="display:flex;margin-bottom:20rpx">
+					<view class="normsrightTxt">
+						挥发:
+					</view>
+					<view class="normsrightNum">
+						{{productDetail.zb_hfa}}
+					</view>
+				</view>
+			</view>
+
+		</view>
+		<view class="normimage" bindtap="tobig" data-src="{{host+productDetail.cphy_img}}">
+			<image class="" src="{{host+productDetail.cphy_img}}" />
+		</view>
+
+	</view>
+	<!-- 间隔灰色 -->
+	<view style="height:20rpx ;background-color:#f2f2f2"></view>
+	<!-- 产品介绍 -->
+	<view class="productintroduceBox">
+		<view class="productintroduceTitleBox">
+			<view>
+				<image class="" src="../../static/icon/1342@2x.png" />
+			</view>
+			<view class="productintroduceTitle">
+				产品介绍
+			</view>
+		</view>
+		<view class="productintroduceTxt">
+			{{productDetail.cpjs}}
+		</view>
+
+	</view>
+	<!-- 拨打电话 -->
+	<view class="callPhone" data-phone="{{productDetail.phone}}" bindtap="callPhone">
+		<image class="" src="../../static/icon/zd@2x.png" />
+	</view>
+	<!-- 去发布 -->
+	<view class="gorelease" bindtap="gorelease">
+		<image class="" src="../../static/icon/87zz@2x.png" />
+	</view>
+
+</view>
+

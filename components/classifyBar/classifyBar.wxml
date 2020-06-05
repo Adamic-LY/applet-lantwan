@@ -1,0 +1,21 @@
+<!--components/classifyBar/classifyBar.wxml-->
+<view class="classifyBar">
+	<view class="classifyBarBox">
+		<view class="bigClass" data-txt="兰炭" bindtap="requestData">
+			兰炭
+		</view>
+		<view
+		 wx:for="{{bartxt}}"
+		 wx:key="index"
+		 class="{{activeindex==index?'chooiseclass':'smallclass'}}"
+		 data-txt="{{bartxt[index]}}"
+		 data-index="{{index}}"
+		 bindtap="requestData"
+		>
+			{{bartxt[index]}}
+		</view>
+
+	</view>
+
+</view>
+

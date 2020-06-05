@@ -1,0 +1,114 @@
+/**index.wxss**/
+
+
+/* 分类栏 */
+
+.classBarBox {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.productListJiange {
+    height: 10rpx;
+    background-color: #f2f2f2;
+}
+
+.productFlex {
+    width: 730rpx;
+    margin: 0 auto;
+    display: flex;
+}
+
+.productImage image {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 10rpx;
+    margin-top: 20rpx;
+}
+
+.productZb {
+    margin-top: 20rpx;
+    margin-left: 30rpx;
+}
+
+.productPrice {
+    display: flex;
+    margin-top: 10rpx;
+    align-items: center;
+}
+
+.productName {
+    font-size: 30rpx;
+    color: #3b3b3b;
+}
+
+.productPriceNum {
+    font-size: 34rpx;
+    color: #e41515;
+}
+
+.productPriceTxt {
+    font-size: 24rpx;
+    color: #aaaaaa;
+    margin-left: 10rpx;
+}
+
+.productZhibiao {
+    width: 340rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productZhibiaoLeft {
+    display: flex;
+    width: 200rpx;
+}
+
+.productZhibiaoLeftTxt,
+.productZhibiaoRightTxt {
+    font-size: 24rpx;
+    color: #aaaaaa;
+    margin-left: 5rpx;
+}
+
+.productZhibiaoLeftNum,
+.productZhibiaoRightNum {
+    font-size: 24rpx;
+    margin-left: 5rpx;
+}
+
+.productZhibiaoRight {
+    display: flex;
+    width: 140rpx;
+}
+
+.productHyd image {
+    margin-top: 20rpx;
+    width: 150rpx;
+    height: 200rpx;
+    margin-left: 10rpx;
+}
+
+.gofabu {
+    width: 750rpx;
+    height: 100rpx;
+    background-color: orangered;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 100rpx;
+    position: fixed;
+    bottom: 0;
+}
+.shownull{
+    height: 500rpx;
+    line-height: 500rpx;
+    text-align: center;
+    font-size: 33rpx;
+    font-weight: bold;
+    color: grey;
+}
